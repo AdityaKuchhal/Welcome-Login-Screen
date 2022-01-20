@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:loginscreen/welcome_screen.dart';
 
 void main() {
   runApp(const Plantify());
@@ -9,6 +11,18 @@ class Plantify extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      systemNavigationBarColor: Colors.black,
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.dark,
+    ));
+    return MaterialApp(
+      initialRoute: WelcomeScreen.id,
+      routes: {
+        WelcomeScreen.id: (context) => WelcomeScreen(),
+      },
+      debugShowCheckedModeBanner: false,
+    );
   }
 }
