@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:loginscreen/login_screen.dart';
 import 'package:loginscreen/welcome_screen.dart';
 
 void main() {
@@ -21,6 +22,7 @@ class Plantify extends StatelessWidget {
       initialRoute: WelcomeScreen.id,
       routes: {
         WelcomeScreen.id: (context) => const WelcomeScreen(),
+        LoginScreen.id: (context) => const LoginScreen(),
       },
       debugShowCheckedModeBanner: false,
     );
