@@ -5,11 +5,11 @@ import 'package:loginscreen/signup_screen.dart';
 import 'package:loginscreen/welcome_screen.dart';
 
 void main() {
-  runApp(const Plantify());
+  runApp(const FitnessApp());
 }
 
-class Plantify extends StatelessWidget {
-  const Plantify({Key? key}) : super(key: key);
+class FitnessApp extends StatelessWidget {
+  const FitnessApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

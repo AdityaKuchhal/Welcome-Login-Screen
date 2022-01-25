@@ -29,6 +29,38 @@ class _LoginScreenState extends State<LoginScreen> {
             height: screenHeight,
             width: screenWidth,
           ),
+          Center(
+            child: Column(
+              // crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  margin: const EdgeInsets.only(top: kToolbarHeight * 1.2),
+                  child: Text(
+                    'Welcome back',
+                    style: TextStyle(
+                      color: kWhite,
+                      fontFamily: 'Nunito',
+                      fontSize: screenHeight / 22,
+                      fontWeight: FontWeight.w600,
+                      decoration: TextDecoration.none,
+                      letterSpacing: 1.4,
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(top: screenHeight / 90),
+                  child: Text(
+                    'Continue with your details',
+                    style: TextStyle(
+                      color: kWhite,
+                      fontSize: screenHeight / 50,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ),
           Container(
             transform: Matrix4.translationValues(0, kToolbarHeight * 4, 1),
             width: screenWidth,
@@ -161,11 +193,8 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 }
 
-final _formKey = GlobalKey<FormState>();
-
 Widget loginForm(double screenHeight, BuildContext context) {
   return Form(
-    key: _formKey,
     child: Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30),
       child: Column(

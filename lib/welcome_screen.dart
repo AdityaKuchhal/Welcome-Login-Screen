@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:loginscreen/login_screen.dart';
+import 'package:loginscreen/signup_screen.dart';
 
 class WelcomeScreen extends StatefulWidget {
   static const String id = 'WelcomeScreen';
@@ -54,7 +55,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   vertical: 12,
                 ),
                 child: InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(context, SignupScreen.id);
+                  },
                   child: Container(
                     height: 50,
                     decoration: BoxDecoration(
