@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:loginscreen/social_card.dart';
-
 import 'constants.dart';
 import 'signup_screen.dart';
 
@@ -328,13 +327,18 @@ Widget loginForm(double screenHeight, BuildContext context) {
             padding: const EdgeInsets.symmetric(horizontal: 14),
             child: InkWell(
               onTap: () {},
-              child: const Text(
-                'Forgot Password?',
-                style: TextStyle(
-                  color: Color.fromRGBO(52, 63, 86, .7),
-                  fontFamily: 'Montserrat',
-                  fontWeight: FontWeight.bold,
-                ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: const [
+                  Text(
+                    'Forgot Password?',
+                    style: TextStyle(
+                      color: Color.fromRGBO(52, 63, 86, .7),
+                      fontFamily: 'Montserrat',
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
               ),
             ),
           )
