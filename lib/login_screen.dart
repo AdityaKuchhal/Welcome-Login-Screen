@@ -327,13 +327,17 @@ Widget loginForm(double screenHeight, BuildContext context) {
             padding: const EdgeInsets.symmetric(horizontal: 14),
             child: InkWell(
               onTap: () {},
-              child: Text(
-                'Forgot Password?',
-                style: TextStyle(
-                  color: Color.fromRGBO(52, 63, 86, .7),
-                  fontFamily: 'Montserrat',
-                  fontWeight: FontWeight.bold,
-                ),
+              child: Row(
+                children: [
+                  Text(
+                    'Forgot Password?',
+                    style: TextStyle(
+                      color: Color.fromRGBO(52, 63, 86, .7),
+                      fontFamily: 'Montserrat',
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
               ),
             ),
           )
