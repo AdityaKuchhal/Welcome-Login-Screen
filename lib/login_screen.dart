@@ -328,7 +328,8 @@ Widget loginForm(double screenHeight, BuildContext context) {
             child: InkWell(
               onTap: () {},
               child: Row(
-                children: [
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: const [
                   Text(
                     'Forgot Password?',
                     style: TextStyle(
